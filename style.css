@@ -15,6 +15,33 @@ html,body{
     font-family:PP Mori ;
 }
 
+.loder{
+    height: 100vh;
+    width: 100%;
+    background-color: #0F0D0D;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loder img{
+    height: 5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loder h1{
+    font-size:3vw ;
+    padding: 10px 10px;
+    font-weight: 300;
+    margin-left: 40px;
+    color: #0F0D0D;
+    /* background-color: #fdfdfd; */
+    border-radius: 50px;
+}
 .main{
     background-color: #0F0D0D;
 }

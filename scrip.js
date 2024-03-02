@@ -1,3 +1,43 @@
+var tl1 = gsap.timeline();
+
+function init(){
+  var x = 0;
+  setInterval(function(){
+    x = x + Math.floor(Math.random()*10)
+    var num = document.querySelector(".loder h1");
+    if(x<100){
+      num.innerHTML=(x +"%");
+    }
+    else{
+      x = 100;
+      num.innerHTML=(x +"%");
+
+    }
+  },150)
+}
+
+
+tl1.to(".loder img",{
+  scale:1.5,
+  duration:1,
+  onStart:init()
+})
+
+tl1.to(".loder",{
+  y:-1000,
+  duration:1
+})
+
+
+
+
+
+
+
+
+
+
+
 function init() {
     gsap.registerPlugin(ScrollTrigger);
     
