@@ -92,7 +92,7 @@ var tl2 = gsap.timeline({
         start:"top 20%",
         scrub:2,
         end:"top 0",
-        // markers:true,
+        
        
     }
 });
@@ -121,7 +121,7 @@ var tl2 = gsap.timeline({
   scrollTrigger: {
       trigger: ".page1 h1",
       scroller: ".main",
-      markers:true,
+      
       start: "top -115%",
       end: "top -120%",
       scrub: 3
@@ -132,4 +132,23 @@ tl2.to(".main", {
 },"a")
 tl2.to("#text-right button", {
   backgroundColor: "#EDBFFF",
+},"a")
+
+
+
+
+var tl3 = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".page1 h1",
+      scroller: ".main",
+      start: "top -270%",
+      end: "top -300%",
+      scrub: 3
+  }
+})
+tl3.to(".main",{
+  backgroundColor:"#0F0D0D"
+},"a")
+tl3.to("#left h5,#left span,#right h5,#right span,.work-list h2", {
+  color: "#ffffff",
 },"a")
