@@ -15,11 +15,14 @@ html,body{
     font-family:PP Mori ;
 }
 .mousefolo{
-    height: 10px;
-    width: 10px;
-    background-color: red;
+    height: 15px;
+    width: 15px;
+    background-color: #EDBFFF;
+    position: fixed;
     z-index: 9999999;
     border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: left linear 0.2s top linear 0.2s;
 }
 .loder{
     height: 100vh;

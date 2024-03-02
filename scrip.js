@@ -30,10 +30,11 @@ tl1.to(".loder",{
 
 
 var mfo = document.querySelector(".mousefolo")
-
-function mouse(){
-
-}
+var main = document.querySelector(".main")
+main.addEventListener("mousemove",function(dets){
+  mfo.style.left = dets.x + "px"
+  mfo.style.top = dets.y + "px"
+})
 
 
 
