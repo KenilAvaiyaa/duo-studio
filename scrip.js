@@ -32,8 +32,8 @@ tl1.to(".loder",{
 var mfo = document.querySelector(".mousefolo")
 var main = document.querySelector(".main")
 main.addEventListener("mousemove",function(dets){
-  mfo.style.left = dets.x + "px"
-  mfo.style.top = dets.y + "px"
+  mfo.style.left = dets.x + 20 + "px"
+  mfo.style.top = dets.y + 20 + "px"
 })
 
 
@@ -152,3 +152,24 @@ tl3.to(".main",{
 tl3.to("#left h5,#left span,#right h5,#right span,.work-list h2", {
   color: "#ffffff",
 },"a")
+
+
+var boxes = document.querySelectorAll(".box")
+boxes.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+        var att = elem.getAttribute("data-image")
+        console.log(att)
+        mfo.style.width = "30vw"
+        mfo.style.height = "30vh"
+        mfo.style.borderRadius = "0"
+        mfo.style.backgroundImage = `url(${att})`
+    })
+    elem.addEventListener("mouseleave", function(){
+      var att = elem.getAttribute("data-image")
+        console.log(att)
+        mfo.style.width = "20px"
+        mfo.style.height = "20px"
+        mfo.style.borderRadius = "50%"
+        mfo.style.backgroundImage = `none`
+    })
+  })
