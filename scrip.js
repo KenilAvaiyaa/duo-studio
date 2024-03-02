@@ -29,6 +29,13 @@ tl1.to(".loder",{
 })
 
 
+var mfo = document.querySelector(".mousefolo")
+
+function mouse(){
+
+}
+
+
 
 
 
@@ -77,33 +84,51 @@ gsap.from(".page1 .intro",{
     ease: Expo.isInOut
 })
 
-var tl = gsap.timeline({
+var tl2 = gsap.timeline({
     scrollTrigger:{
         trigger:".page1 h1",
         scroller:".main",
         start:"top 20%",
         scrub:2,
         end:"top 0",
-        markers:true,
+        // markers:true,
        
     }
 });
 
 
-tl.to(".page1 h1",{
+tl2.to(".page1 h1",{
     x:-100,
     duration:1,
     
 },"anime")
-tl.to(".page1 h2",{
+tl2.to(".page1 h2",{
     x:100,
     duration:1, 
     
 },"anime")
 
 
-tl.to("#himg #title,#himg img",{
+tl2.to("#himg #title,#himg img",{
     width:"90vw",
 },"anime")
 
 
+
+
+var tl2 = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".page1 h1",
+      scroller: ".main",
+      markers:true,
+      start: "top -115%",
+      end: "top -120%",
+      scrub: 3
+  }
+})
+tl2.to(".main", {
+  backgroundColor: "#fff",
+},"a")
+tl2.to("#text-right button", {
+  backgroundColor: "#EDBFFF",
+},"a")
