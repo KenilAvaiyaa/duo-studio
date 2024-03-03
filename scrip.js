@@ -32,8 +32,8 @@ tl1.to(".loder",{
 var mfo = document.querySelector(".mousefolo")
 var main = document.querySelector(".main")
 main.addEventListener("mousemove",function(dets){
-  mfo.style.left = dets.x + 20 + "px"
-  mfo.style.top = dets.y + 20 + "px"
+  mfo.style.left = dets.x + 5 + "px"
+  mfo.style.top = dets.y + 5 + "px"
 })
 
 
@@ -161,6 +161,7 @@ boxes.forEach(function(elem){
         console.log(att)
         mfo.style.width = "30vw"
         mfo.style.height = "30vh"
+        mfo.style.border = "1.5px solid white"
         mfo.style.borderRadius = "0"
         mfo.style.backgroundImage = `url(${att})`
     })

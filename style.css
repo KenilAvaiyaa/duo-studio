@@ -342,6 +342,28 @@ a{
     height: 50vh;
 }
 
+.elem #img2:nth-child(1){
+    height: 30vh;
+    top:15%;
+    left:5%;
+}
+.elem #img2:nth-child(3){
+    height: 50vh;
+    top:-3%;
+    right:5%;
+}
+
+.elem #img3:nth-child(1){
+    height: 25vh;
+    top:-1%;
+    left:5%;
+}
+.elem #img3:nth-child(3){
+    height: 40vh;
+    top:10%;
+    right:5%;
+}
+
 .elem:hover h1{
     transform: translateY(-100%);
     color: #EDBFFF;
