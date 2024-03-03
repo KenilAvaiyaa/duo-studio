@@ -173,4 +173,21 @@ boxes.forEach(function(elem){
         mfo.style.borderRadius = "50%"
         mfo.style.backgroundImage = `none`
     })
-  })
+})
+
+
+var tl4 = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".page1 h1",
+      scroller: ".main",
+      start: "top -450%",
+      // markers:true,
+      end: "top -570%",
+      scrub: 3
+    }
+})
+
+tl4.from("footer",{
+  opacity:0,
+  duration:1,
+})
