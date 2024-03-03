@@ -19,7 +19,7 @@ html,body{
     width: 20px;
     background-color: #EDBFFF;
     position: fixed;
-    z-index: 9;
+    z-index: 100;
     border-radius: 50%;
     mix-blend-mode: difference;
     background-position: center;
@@ -54,13 +54,40 @@ html,body{
     border-radius: 50px;
 }
 
-/* .menu-ef{
+.menu-eff{
     height: 100vh;
     width: 100vw;
     position: fixed;
-    z-index: 100;
-} */
+    background-color: #EDBFFF;
+    cursor: none;
+    z-index: 99;
+    opacity: 0;
+    display: none;
+    transition:  all ease 6 s;
+}
 
+.menu-eff h1{
+    color: #0F0D0D;
+    text-transform: uppercase;
+    font-size: 4vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: loopText 2s infinite;
+}
+
+@keyframes loopText {
+    0% {
+      font-size: 4vw;
+    }
+    50% {
+        font-size: 5vw; /* Adjust the value to control the vertical movement */
+    }
+    100% {
+        font-size: 4vw;
+    }
+}
 .main{
     background-color: #0F0D0D;
     cursor: none;
@@ -249,14 +276,14 @@ a{
     margin-top: 3px;
     font-size: 1.2vw;
     font-weight: 500;
-    color: black;
+    color: #0F0D0D;
 }
 
 .page3 .work-co span{
     /* margin-top:; */
     font-size: 1vw;
     font-weight: 200;
-    color: #000;
+    color: #0F0D0D;
 }
 
 .page3 .work-co #left{
@@ -440,7 +467,7 @@ a{
 }
 
 footer{
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     background-color: #EDBFFF;
     padding: 30px 30px;

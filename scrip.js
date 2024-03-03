@@ -169,7 +169,7 @@ var tl4 = gsap.timeline({
       scroller: ".main",
       start: "top -450%",
       // markers:true,
-      end: "top -570%",
+      end: "top -520%",
       scrub: 3
     }
 })
@@ -177,3 +177,20 @@ tl4.from("footer",{
   opacity:0,
   duration:1,
 })
+
+
+var nev_a = document.querySelectorAll(".nav-2 a,.nav-3 a")
+var purple = document.querySelector(".menu-eff")
+var a = document.querySelector(".menu-eff h1")
+nev_a.forEach(function(elem){
+  var i = 0;
+  elem.addEventListener("mouseenter",function(){
+    purple.style.opacity="1",
+    purple.style.display="block",
+    a.innerHTML=elem.innerText
+  })
+  elem.addEventListener("mouseleave",function(){
+    purple.style.opacity="0",
+    purple.style.display="none"
+  })
+}) 
