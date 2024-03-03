@@ -53,6 +53,14 @@ html,body{
     /* background-color: #fdfdfd; */
     border-radius: 50px;
 }
+
+/* .menu-ef{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+} */
+
 .main{
     background-color: #0F0D0D;
     cursor: none;
@@ -61,19 +69,22 @@ html,body{
 .page1{
     min-height: 100vh;
     width: 100vw;
+    padding-top: 12vh;
 }
 
-.page1 .nav{
+.nav{
     padding: 5px 30px;
     height:5%;
     width: 100vw;
+    position: fixed;
+    mix-blend-mode: difference;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    z-index: 102;
 }
 
-.page1 .nav img{
+.nav img{
     height: 2vw;
 }
 
@@ -85,7 +96,7 @@ a{
     color: white;
 }
 
-.page1 .nav .nav-2 a{
+.nav .nav-2 a{
     margin-left: 15px;
 }
 
@@ -99,7 +110,6 @@ a{
     font-weight: 300;
     font-family: PP mori;
     margin-left: 6vw;
-    margin-top: 12vw;
     transform-origin: left;
 }
 .page1 .intro h2{

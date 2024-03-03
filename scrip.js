@@ -31,20 +31,10 @@ tl1.to(".loder",{
 
 var mfo = document.querySelector(".mousefolo")
 var main = document.querySelector(".main")
-main.addEventListener("mousemove",function(dets){
+document.addEventListener("mousemove",function(dets){
   mfo.style.left = dets.x + 5 + "px"
   mfo.style.top = dets.y + 5 + "px"
 })
-
-
-
-
-
-
-
-
-
-
 
 function init() {
     gsap.registerPlugin(ScrollTrigger);
@@ -75,7 +65,6 @@ function init() {
    ScrollTrigger.refresh();
 
 }
-
 init()
 
 gsap.from(".page1 .intro",{
@@ -97,7 +86,6 @@ var tl2 = gsap.timeline({
     }
 });
 
-
 tl2.to(".page1 h1",{
     x:-100,
     duration:1,
@@ -108,12 +96,10 @@ tl2.to(".page1 h2",{
     duration:1, 
     
 },"anime")
-
-
 tl2.to("#himg #title,#himg img",{
     width:"90vw",
+    duration:2
 },"anime")
-
 
 
 
@@ -136,7 +122,6 @@ tl2.to("#text-right button", {
 
 
 
-
 var tl3 = gsap.timeline({
   scrollTrigger: {
       trigger: ".page1 h1",
@@ -152,6 +137,7 @@ tl3.to(".main",{
 tl3.to("#left h5,#left span,#right h5,#right span,.work-list h2", {
   color: "#ffffff",
 },"a")
+
 
 
 var boxes = document.querySelectorAll(".box")
@@ -176,6 +162,7 @@ boxes.forEach(function(elem){
 })
 
 
+
 var tl4 = gsap.timeline({
   scrollTrigger: {
       trigger: ".page1 h1",
@@ -186,7 +173,6 @@ var tl4 = gsap.timeline({
       scrub: 3
     }
 })
-
 tl4.from("footer",{
   opacity:0,
   duration:1,
