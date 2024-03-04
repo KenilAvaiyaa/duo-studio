@@ -1,5 +1,3 @@
-var tl1 = gsap.timeline();
-
 function init(){
   var x = 0;
   setInterval(function(){
@@ -11,23 +9,20 @@ function init(){
     else{
       x = 100;
       num.innerHTML=(x +"%");
-
     }
   },150)
 }
 
-
+var tl1 = gsap.timeline();
 tl1.to(".loder img",{
   scale:1.5,
   duration:1,
   onStart:init()
 })
-
 tl1.to(".loder",{
   y:-1000,
   duration:1
 })
-
 
 var mfo = document.querySelector(".mousefolo")
 var main = document.querySelector(".main")
@@ -67,50 +62,47 @@ function init() {
 }
 init()
 
-gsap.from(".page1 .intro",{
-    opacity:0,
-    duration:3,
-    delay:0.2,
-    ease: Expo.isInOut
-})
 
+
+gsap.from(".page1 .intro",{
+  opacity:0,
+  duration:3,
+  delay:0.2,
+  ease: Expo.isInOut
+})
 var tl2 = gsap.timeline({
     scrollTrigger:{
-        trigger:".page1 h1",
-        scroller:".main",
-        start:"top 20%",
-        scrub:2,
-        end:"top 0",
-        
-       
+      trigger:".page1 h1",
+      scroller:".main",
+      start:"top 15%",
+      scrub:2,
+      end:"top 0",
     }
 });
 
 tl2.to(".page1 h1",{
-    x:-100,
-    duration:1,
-    
+  x:-170,
+  duration:1,  
 },"anime")
 tl2.to(".page1 h2",{
-    x:100,
-    duration:1, 
-    
+  x:150,
+  duration:1, 
 },"anime")
 tl2.to("#himg #title,#himg img",{
-    width:"90vw",
-    duration:2
+  width:"90vw",
+  duration:2
 },"anime")
 
 
 
 var tl2 = gsap.timeline({
   scrollTrigger: {
-      trigger: ".page1 h1",
-      scroller: ".main",
-      
-      start: "top -115%",
-      end: "top -120%",
-      scrub: 3
+    trigger: ".page1 h1",
+    scroller: ".main",
+    markers:true,
+    start: "top -48%",
+    end: "top -53%",
+    scrub: 3
   }
 })
 tl2.to(".main", {
@@ -124,17 +116,17 @@ tl2.to("#text-right button", {
 
 var tl3 = gsap.timeline({
   scrollTrigger: {
-      trigger: ".page1 h1",
-      scroller: ".main",
-      start: "top -270%",
-      end: "top -300%",
-      scrub: 3
+    trigger: ".page1 h1",
+    scroller: ".main",
+    start: "top -150%",
+    end: "top -165%",
+    scrub: 5
   }
 })
 tl3.to(".main",{
   backgroundColor:"#0F0D0D"
 },"a")
-tl3.to("#left h5,#left span,#right h5,#right span,.work-list h2", {
+tl3.to("#text-left h2,#text-right p,.page3 h1,#left h5,#left span,#right h5,#right span,.work-list h2", {
   color: "#ffffff",
 },"a")
 
@@ -143,41 +135,37 @@ tl3.to("#left h5,#left span,#right h5,#right span,.work-list h2", {
 var boxes = document.querySelectorAll(".box")
 boxes.forEach(function(elem){
     elem.addEventListener("mouseenter",function(){
-        var att = elem.getAttribute("data-image")
-        console.log(att)
-        mfo.style.width = "30vw"
-        mfo.style.height = "30vh"
-        mfo.style.border = "1.5px solid white"
-        mfo.style.borderRadius = "0"
-        mfo.style.backgroundImage = `url(${att})`
+      var att = elem.getAttribute("data-image")
+      console.log(att)
+      mfo.style.width = "30vw"
+      mfo.style.height = "30vh"
+      mfo.style.border = "1.5px solid white"
+      mfo.style.borderRadius = "0"
+      mfo.style.backgroundImage = `url(${att})`
     })
     elem.addEventListener("mouseleave", function(){
       var att = elem.getAttribute("data-image")
-        console.log(att)
-        mfo.style.width = "20px"
-        mfo.style.height = "20px"
-        mfo.style.borderRadius = "50%"
-        mfo.style.backgroundImage = `none`
+      console.log(att)
+      mfo.style.width = "20px"
+      mfo.style.height = "20px"
+      mfo.style.borderRadius = "50%"
+      mfo.style.backgroundImage = `none`
     })
 })
 
-
-
 var tl4 = gsap.timeline({
   scrollTrigger: {
-      trigger: ".page1 h1",
-      scroller: ".main",
-      start: "top -450%",
-      // markers:true,
-      end: "top -520%",
-      scrub: 3
-    }
+    trigger: ".page1 h1",
+    scroller: ".main",
+    start: "top -300%",
+    end: "top -310%",
+    scrub: 3
+  }
 })
 tl4.from("footer",{
   opacity:0,
-  duration:1,
+  duration:6,
 })
-
 
 var nev_a = document.querySelectorAll(".nav-2 a")
 var nev_a2 = document.querySelector(".nav-3 a")
