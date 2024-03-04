@@ -179,18 +179,36 @@ tl4.from("footer",{
 })
 
 
-var nev_a = document.querySelectorAll(".nav-2 a,.nav-3 a")
+var nev_a = document.querySelectorAll(".nav-2 a")
+var nev_a2 = document.querySelector(".nav-3 a")
 var purple = document.querySelector(".menu-eff")
-var a = document.querySelector(".menu-eff h1")
+var a = document.querySelectorAll(".menu-eff h1")
 nev_a.forEach(function(elem){
-  var i = 0;
+
   elem.addEventListener("mouseenter",function(){
     purple.style.opacity="1",
     purple.style.display="block",
-    a.innerHTML=elem.innerText
+    a.forEach(function(tx){
+      tx.innerHTML=elem.innerText
+    })
   })
   elem.addEventListener("mouseleave",function(){
     purple.style.opacity="0",
     purple.style.display="none"
   })
 }) 
+
+nev_a2.addEventListener("mouseenter",function(){
+  purple.style.opacity="1",
+  purple.style.display="block",
+  a.forEach(function(tx){
+    tx.innerHTML="DuoStudio"
+  })
+})
+nev_a2.addEventListener("mouseleave",function(){
+  purple.style.opacity="0",
+  purple.style.display="none"
+})
+
+
+

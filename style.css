@@ -63,29 +63,33 @@ html,body{
     z-index: 99;
     opacity: 0;
     display: none;
-    transition:  all ease 6 s;
+    transition:  all ease 6s;
 }
 
-.menu-eff h1{
-    color: #0F0D0D;
-    text-transform: uppercase;
-    font-size: 4vw;
+.menu-eff .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: loopText 2s infinite;
 }
 
+.menu-eff h1{
+    color: #0F0D0D;
+    padding-left: 1vw;
+    text-transform: uppercase;
+    font-size: 4vw;
+    animation: loopText 2.5s infinite;
+    animation-timing-function: linear;
+}
 @keyframes loopText {
-    0% {
-      font-size: 4vw;
+    from{
+        transform: translateX(0%);
     }
-    50% {
-        font-size: 5vw; /* Adjust the value to control the vertical movement */
-    }
-    100% {
-        font-size: 4vw;
+    to{
+        transform: translateX(-100%);
     }
 }
 .main{
@@ -131,6 +135,7 @@ a{
     border-bottom: 1.5px solid white;
     transition: all ease 0.5s;
 }
+
 
 .page1 .intro h1{
     font-size: 8vw;
