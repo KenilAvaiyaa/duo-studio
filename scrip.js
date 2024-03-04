@@ -136,7 +136,7 @@ boxes.forEach(function(elem){
     elem.addEventListener("mouseenter",function(){
       var att = elem.getAttribute("data-image")
       console.log(att)
-      mfo.style.width = "30vw"
+      mfo.style.width = "40vw"
       mfo.style.height = "30vh"
       mfo.style.border = "1.5px solid white"
       mfo.style.borderRadius = "0"

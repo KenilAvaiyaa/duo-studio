@@ -566,16 +566,7 @@ footer #footer-bottom h4{
     
     /* code for mouse folo dote */
     .mousefolo{
-        height: 5px;
-        width: 5px;
-        background-color: #EDBFFF;
-        position: fixed;
-        z-index: 100;
-        border-radius: 50%;
-        mix-blend-mode: difference;
-        background-position: center;
-        background-size:cover ;
-        transition: left linear 0.5s top linear 0.5s;
+       display: none;
     }
 
      /* code for page 1 */
